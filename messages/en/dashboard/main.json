@@ -1,0 +1,9 @@
+{
+    "title": "Dashboard",
+    "subtitle": "Welcome to the dashboard",
+    "about": "About this dashboard",
+    "Navbar": {
+        "save": "Save",
+        "cancel": "Cancel"
+    }
+}

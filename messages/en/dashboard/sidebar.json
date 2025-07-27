@@ -1,0 +1,9 @@
+{
+    "dashboard": {
+        "title": "Dashboard"
+    },
+    "settings": {
+        "title": "Settings",
+        "logout": "Logout"
+    }
+}
