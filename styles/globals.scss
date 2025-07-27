@@ -2,13 +2,17 @@
 @import "primeReactArabicStyle.scss";
 
 // COLOR THE LOGOUT BUTTON
-a[href="/auth/login"]{
+a[href="/login"]{
     color: #ff0000 !important;
 }
 
 .rtl{
     direction: rtl;
     text-align: right;
+}
+
+.rubik-font{
+    font-family: 'Rubik', sans-serif;
 }
 
 // BUTTONS ACTIONS

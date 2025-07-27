@@ -10,13 +10,15 @@ export default getRequestConfig(async ({ requestLocale }) => {
     const locale = hasLocale(routing.locales, requested) ? requested : routing.defaultLocale;
 
     const messages = await Promise.all(fileNames.map(async (fileName) => {
-        const content = await import(`../../messages/${locale}/${fileName}.json`);
+        const messagesModule = await import(`../../messages/${locale}/${fileName}.json`);
+        // Use messagesModule.default if available, otherwise fallback to messagesModule
+        const content = messagesModule.default ?? messagesModule;
         return { fileName, content };
     }));
 
     // Format: { [fileName]: content }
     const messagesObj = messages.reduce((acc, { fileName, content }) => {
-        acc[fileName] = content;
+        acc[fileName.replaceAll('/', '_')] = content;
         return acc;
     }, {} as Record<string, any>);
 

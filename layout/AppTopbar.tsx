@@ -19,8 +19,8 @@ const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
 
     return (
         <div className="layout-topbar">
-            <Link href="/" className="layout-topbar-logo">
-                {/* <img src={`/assets/topbar-logo.svg`} width="41px" height={'57px'} alt="logo" /> */}
+            <Link href="/" className="layout-topbar-logo flags flex align-items-center gap-2">
+                <img src={`/logo.svg`} width="30" height={'30px'} alt="logo" />
                 <span>KW-TAXI</span>
             </Link>
 

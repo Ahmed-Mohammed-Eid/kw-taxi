@@ -1,9 +1,42 @@
 {
-    "title": "Dashboard",
-    "subtitle": "Welcome to the dashboard",
-    "about": "About this dashboard",
-    "Navbar": {
-        "save": "Save",
-        "cancel": "Cancel"
+    "title": "Drivers List",
+    "dataTable": {
+        "Driver": {
+            "driverName": "Driver Name",
+            "phoneNumber": "Phone Number",
+            "licenseNumber": "License Number",
+            "companyName": "Company Name",
+            "carNumber": "Car Number",
+            "driverDocs": "Driver Documents",
+            "isActive": "Active Status",
+            "isApproved": "Approval Status",
+            "password": "Password",
+            "role": "Role",
+            "averageRating": "Average Rating",
+            "ratings": "Total Ratings",
+            "reviewers": "Number of Reviewers",
+            "declinedOrders": "Declined Orders",
+            "walletId": "Wallet ID",
+            "createdAt": "Creation Date",
+            "updatedAt": "Last Update",
+            "driverLogId": "Driver Log ID",
+            "actions":  {
+                "title": "Actions",
+                "view": "View",
+                "edit": "Edit",
+                "delete": "Delete"
+            }
+        },
+        "empty": "No data available to display",
+        "Status": {
+            "active": "Active",
+            "inactive": "Inactive",
+            "approved": "Approved",
+            "pending": "Pending Approval",
+            "declined": "Declined"
+        },
+        "Role": {
+            "driver": "Driver"
+        }
     }
 }

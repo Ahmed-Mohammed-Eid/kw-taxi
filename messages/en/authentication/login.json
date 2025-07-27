@@ -1,0 +1,13 @@
+{
+        "arabic": "Arabic",
+        "english": "English",
+        "title": "Login",
+        "username": "Username",
+        "password": "Password",
+        "rememberMe": "Remember Me",
+        "loginButton": "Login",
+        "invalidUsername": "Invalid username",
+        "invalidPassword": "Invalid password",
+        "notAuthorized": "You are not authorized to access this page",
+        "loginFailed": "Login failed. Please check your credentials."
+}

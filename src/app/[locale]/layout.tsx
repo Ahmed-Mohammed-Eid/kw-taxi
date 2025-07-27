@@ -1,8 +1,10 @@
+import { cookies } from 'next/headers';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import '../../../styles/globals.scss';
 import '../../../styles/primeReactArabicStyle.scss';
+import RootClientLayout from '../client-layout';
 
 export default async function LocaleLayout({ children, params }: { children: React.ReactNode; params: Promise<{ locale: string }> }) {
     // Ensure that the incoming `locale` is valid
@@ -13,8 +15,13 @@ export default async function LocaleLayout({ children, params }: { children: Rea
 
     return (
         <html lang={locale}>
+            <head>
+                <link id="theme-css" href={`/themes/kw-taxi/theme.css`} rel="stylesheet"></link>
+            </head>
             <body>
-                <NextIntlClientProvider>{children}</NextIntlClientProvider>
+                <NextIntlClientProvider>
+                    <RootClientLayout>{children}</RootClientLayout>
+                </NextIntlClientProvider>
             </body>
         </html>
     );

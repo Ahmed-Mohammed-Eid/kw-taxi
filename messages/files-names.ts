@@ -1,1 +1,1 @@
-export const fileNames = ['dashboard/main', 'dashboard/drivers/main', 'dashboard/sidebar'];
+export const fileNames = ['dashboard/main', 'dashboard/drivers/main', 'dashboard/sidebar', 'authentication/login'];

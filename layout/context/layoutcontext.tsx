@@ -1,7 +1,6 @@
 'use client';
 import React, { useState, createContext } from 'react';
 import { LayoutState, ChildContainerProps, LayoutConfig, LayoutContextProps } from '../../types';
-import { cookies } from 'next/dist/client/components/headers';
 export const LayoutContext = createContext({} as LayoutContextProps);
 import Cookies from 'js-cookie';
 
@@ -12,7 +11,7 @@ export const LayoutProvider = ({ children }: ChildContainerProps) => {
         inputStyle: 'outlined',
         menuMode: 'static',
         colorScheme: 'light',
-        theme: 'lara-light-indigo',
+        theme: 'kw-taxi',
         scale: 14,
         language: Cookies.get('NEXT_LOCALE') || 'ar',
     });

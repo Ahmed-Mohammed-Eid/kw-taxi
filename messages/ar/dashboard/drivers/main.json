@@ -1,4 +1,42 @@
 {
-    "title": "السائقين",
-    "subtitle": "إدارة السائقين"
+    "title": "قائمة السائقين",
+    "dataTable": {
+        "Driver": {
+            "driverName": "اسم السائق",
+            "phoneNumber": "رقم الهاتف",
+            "licenseNumber": "رقم الرخصة",
+            "companyName": "اسم الشركة",
+            "carNumber": "رقم السيارة",
+            "driverDocs": "مستندات السائق",
+            "isActive": "الحالة النشطة",
+            "isApproved": "حالة الموافقة",
+            "password": "كلمة المرور",
+            "role": "الدور",
+            "averageRating": "متوسط التقييم",
+            "ratings": "إجمالي التقييمات",
+            "reviewers": "عدد المقيمين",
+            "declinedOrders": "الطلبات المرفوضة",
+            "walletId": "معرف المحفظة",
+            "createdAt": "تاريخ الإنشاء",
+            "updatedAt": "آخر تحديث",
+            "driverLogId": "معرف سجل السائق",
+            "actions": {
+                "title": "الإجراءات",
+                "view": "عرض",
+                "edit": "تعديل",
+                "delete": "حذف"
+            }
+        },
+        "empty": "لا توجد بيانات لعرضها",
+        "Status": {
+            "active": "نشط",
+            "inactive": "غير نشط",
+            "approved": "تمت الموافقة",
+            "pending": "في انتظار الموافقة",
+            "declined": "مرفوض"
+        },
+        "Role": {
+            "driver": "سائق"
+        }
+    }
 }

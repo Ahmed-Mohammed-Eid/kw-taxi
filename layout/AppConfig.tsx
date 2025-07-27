@@ -67,7 +67,6 @@ const AppConfig = (props: AppConfigProps) => {
     }, [layoutConfig.scale]);
 
     const _changeLanguage = (language: string) => {
-        console.log('Changing language to:', language);
         setLayoutConfig((prevState: LayoutConfig) => ({ ...prevState, language }));
         // Here you would typically also change the language in your i18n setup
         const activeLanguage = pathname.split('/')[1];
@@ -150,6 +149,14 @@ const AppConfig = (props: AppConfigProps) => {
                         <InputSwitch checked={layoutConfig.ripple as boolean} onChange={(e) => changeRipple(e)}></InputSwitch>
                     </>
                 )}
+                <h5>Custom Themes</h5>
+                <div className="grid">
+                    <div className="col-3">
+                        <button className="p-link w-2rem h-2rem" onClick={() => _changeTheme('kw-taxi', 'light')}>
+                            <img src="/logo.svg" className="w-2rem h-2rem" alt="Lara Light Yellow" />
+                        </button>
+                    </div>
+                </div>
                 <h5>PrimeOne Design</h5>
                 <div className="grid">
                     <div className="col-3">

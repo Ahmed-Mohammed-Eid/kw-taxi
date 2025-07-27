@@ -2,6 +2,9 @@
     "dashboard": {
         "title": "Dashboard"
     },
+    "drivers": {
+        "title": "Drivers"
+    },
     "settings": {
         "title": "Settings",
         "logout": "Logout"

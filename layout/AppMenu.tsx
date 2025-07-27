@@ -6,27 +6,34 @@ import { LayoutContext } from './context/layoutcontext';
 import { MenuProvider } from './context/menucontext';
 import Link from 'next/link';
 import { AppMenuItem } from '../types';
-import { useTranslations,useLocale } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 const AppMenu = () => {
     const { layoutConfig } = useContext(LayoutContext);
-    const t = useTranslations("dashboard/sidebar");
-    const locale = useLocale();
+    const t = useTranslations('dashboard_sidebar');
+    // const locale = useLocale();
 
     const model: AppMenuItem[] = [
         {
             label: t('dashboard.title'),
             icon: 'pi pi-fw pi-home',
             to: '/dashboard',
-            items: []
+            items: [
+                {
+                    label: t('drivers.title'),
+                    icon: 'pi pi-fw pi-users',
+                    to: '/drivers'
+                }
+            ]
         },
         {
             label: t('settings.title'),
             items: [
                 {
                     label: t('settings.logout'),
-                    icon: locale === 'en' ? 'pi pi-sign-out' : 'pi pi-sign-in',
-                    to: '/auth/login',
+                    // icon: locale === 'en' ? 'pi pi-sign-out' : 'pi pi-sign-in',
+                    icon: 'pi pi-sign-out',
+                    to: '/login',
                     command: () => {
                         // Clear local storage
                         localStorage.clear();
@@ -35,7 +42,7 @@ const AppMenu = () => {
                             document.cookie = c.replace(/^ +/, '').replace(/=.*/, '=;expires=' + new Date().toUTCString() + ';path=/');
                         });
                         // Redirect to login page
-                        window.location.href = '/auth/login';
+                        window.location.href = '/login';
                     }
                 }
             ]

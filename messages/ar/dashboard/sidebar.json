@@ -2,6 +2,9 @@
     "dashboard": {
         "title": "لوحة التحكم"
     },
+    "drivers": {
+        "title": "السائقين"
+    },
     "settings": {
         "title": "الإعدادات",
         "logout": "تسجيل الخروج"

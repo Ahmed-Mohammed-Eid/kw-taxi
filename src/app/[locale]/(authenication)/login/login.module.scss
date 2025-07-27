@@ -1,0 +1,141 @@
+// login.module.scss
+
+$primary-color: var(--primary-color);
+$text-color: var(--text-color);
+$surface-ground: var(--surface-ground);
+$surface-card: var(--surface-card);
+$surface-d: var(--surface-d);
+
+.loginContainer {
+    background-color: $surface-ground;
+}
+
+.loginCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $surface-card;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+}
+
+.localeSwitcher {
+    align-self: flex-end;
+    margin-bottom: 1rem;
+    a {
+        text-decoration: none;
+        color: $primary-color;
+        font-weight: 500;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.localeItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease-in-out;
+    font-family: 'Rubik', sans-serif;
+    cursor: pointer;
+    &:hover {
+        background-color: $surface-d;
+    }
+}
+
+.localeIcon {
+    font-size: 1.2rem;
+    color: $primary-color
+}
+
+.formWrapper {
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: $text-color;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.input {
+    width: 100%;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: $text-color;
+    transition: border-color 0.2s;
+    &:focus {
+        outline: none;
+    }
+}
+
+.loginButton {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: $primary-color;
+    border: none;
+    color: var(--primary-color-text);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    &:hover {
+        background-color: hsla(from var(--primary-color) h s calc(l - 10));
+    }
+    &.p-disabled {
+        background-color: #dcdcf1 !important;
+        cursor: not-allowed;
+    }
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .loginCard {
+        padding: 3rem;
+        max-width: 500px;
+    }
+
+    .form {
+        gap: 1.5rem;
+    }
+
+    .input {
+        font-size: 1.1rem;
+    }
+
+    .loginButton {
+        font-size: 1.1rem;
+        padding: 0.9rem 1.1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .loginCard {
+        max-width: 600px;
+    }
+}
