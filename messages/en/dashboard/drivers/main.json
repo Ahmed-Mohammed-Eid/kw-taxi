@@ -1,5 +1,44 @@
 {
     "title": "Drivers List",
+    "addDriver": "Add Driver",
+    "add": {
+        "title": "Add Driver",
+        "driverName": "Driver Name",
+        "phoneNumber": "Phone Number",
+        "licenseNumber": "License Number",
+        "companyName": "Company Name",
+        "carNumber": "Car Number",
+        "password": "Password",
+        "files": "Driver Documents",
+        "dragDropFiles": "Drag and drop files here or click to select",
+        "chooseFiles": "Choose Files",
+        "upload": "Upload",
+        "cancel": "Cancel",
+        "isApproved": "Approved",
+        "submit": "Submit",
+        "submitting": "Submitting...",
+        "successTitle": "Success",
+        "successMessage": "Driver added successfully!",
+        "errorTitle": "Error",
+        "errorMessage": "Failed to add driver. Please try again."
+    },
+    "edit": {
+        "title": "Edit Driver",
+        "driverName": "Driver Name",
+        "phoneNumber": "Phone Number",
+        "licenseNumber": "License Number",
+        "companyName": "Company Name",
+        "carNumber": "Car Number",
+        "password": "Password",
+        "files": "Driver Documents",
+        "isActive": "Active",
+        "isApproved": "Approved",
+        "cancel": "Cancel",
+        "submit": "Submit",
+        "submitting": "Submitting...",
+        "fetchErrorTitle": "Error",
+        "fetchErrorMessage": "Failed to fetch driver details. Please try again."
+    },
     "dataTable": {
         "Driver": {
             "driverName": "Driver Name",
@@ -20,7 +59,7 @@
             "createdAt": "Creation Date",
             "updatedAt": "Last Update",
             "driverLogId": "Driver Log ID",
-            "actions":  {
+            "actions": {
                 "title": "Actions",
                 "view": "View",
                 "edit": "Edit",

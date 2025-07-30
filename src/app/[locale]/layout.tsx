@@ -2,6 +2,9 @@ import { cookies } from 'next/headers';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+
+import 'primeicons/primeicons.css';
+        
 import '../../../styles/globals.scss';
 import '../../../styles/primeReactArabicStyle.scss';
 import RootClientLayout from '../client-layout';

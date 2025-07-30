@@ -60,9 +60,9 @@ const LoginPage = () => {
             });
 
             localStorage.setItem('token', res.data.token);
-            localStorage.setItem('role', res.data?.user?.role);
+            localStorage.setItem('role', res.data?.admin?.role);
             document.cookie = `token=${res.data.token}; path=/`;
-            document.cookie = `role=${res.data?.user?.role}; path=/`;
+            document.cookie = `role=${res.data?.admin?.role}; path=/`;
 
             if (res.data?.admin?.role === 'admin') {
                 const timer = setTimeout(() => {

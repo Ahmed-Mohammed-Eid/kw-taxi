@@ -3,6 +3,7 @@ import Layout from '../../../../layout/layout';
 import { useLocale } from 'next-intl';
 import { cookies } from 'next/headers';
 import { redirect } from '@/i18n/navigation';
+import axios from 'axios';
 
 interface AppLayoutProps {
     children: React.ReactNode;
@@ -23,23 +24,43 @@ export const metadata: Metadata = {
         ttl: 604800
     },
     icons: {
-        icon: '/favicon.ico'
+        icon: '/logo.ico'
+    }
+};
+
+const validateToken = async (token: string | null, locale: string) => {
+    if (!token) {
+        redirect({
+            href: '/login',
+            locale: locale
+        });
+    }
+
+    // CHECK THAT TOKEN IS VALID
+    try {
+        const response = await axios.get(`${process.env.API_URL}/all/drivers`, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        });
+
+        if (response.statusText !== 'OK') {
+            throw new Error('Invalid token');
+        }
+    } catch (error) {
+        redirect({
+            href: '/login',
+            locale: locale
+        });
     }
 };
 
 export default async function AppLayout({ children, params }: AppLayoutProps) {
-
     const cookieStore = await cookies();
     const token = cookieStore.get('token')?.value;
-    const { locale } = await params;
 
-    if (!token) {
-        // Redirect to login if no token is found
-        return redirect({
-            href: `/login`,
-            locale: locale
-        });
-    }
+    const { locale } = await params;
+    await validateToken(token || null, locale);
 
     return <Layout>{children}</Layout>;
 }

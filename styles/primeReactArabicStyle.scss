@@ -71,9 +71,14 @@ html[lang="ar"] .p-dropdown .p-dropdown-clear-icon {
     left: 3rem;
 }
 
-.p-datatable-table,
-.p-inputtext{
-    font-family: 'Rubik', sans-serif;
+html[lang="ar"] {
+    .p-datatable-table,
+    .p-inputtext,
+    .p-button,
+    h1,h2,h3,h4,h5,h6,
+    p,span,table,tr,td,th,div{
+        font-family: 'Rubik', sans-serif;
+    }
 }
 
 

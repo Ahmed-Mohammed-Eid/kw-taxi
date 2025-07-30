@@ -1,7 +1,7 @@
 # RULES
 
 - Always use primereact when it's applicable
-- for toasting always use `react-hook-toast`
+- for toasting always use `react-toastify`
 - for http requests always use `axios`
 - Don't use third party packages, just when I tell you to use them
 - Don't install plugins just tell me what we need to install and I will install it manually
@@ -10,6 +10,7 @@
 - Don't use the primereact toast component.
 - In layout always use grid if possible from primeflex
 - Use scss modules for styling if you need to type custom style
+- For forms use `react-hook-form` and for the validation use `zod`
 
 ## DESIGN PRINCIPLES
 
