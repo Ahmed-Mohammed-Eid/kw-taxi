@@ -1,8 +1,8 @@
 :root {
-	font-family: "Inter var", sans-serif;
+	font-family: 'Rubik', sans-serif;
 	font-feature-settings: "cv02", "cv03", "cv04", "cv11";
 	font-variation-settings: normal;
-	--font-family: "Inter var", sans-serif;
+	--font-family: 'Rubik', sans-serif;
 	--font-feature-settings: "cv02", "cv03", "cv04", "cv11";
 	--surface-a: hsla(0, 0%, 100%, 1);
 	--surface-b: hsla(210, 20%, 98%, 1);
