@@ -23,6 +23,9 @@ html[lang="ar"] .p-password.p-component.p-inputwrapper.p-input-icon-right.w-full
     font-display: swap;
 }
 
+.rubik-font {
+    font-family: 'Rubik', sans-serif;
+}
 
 html[lang="ar"] {
 
@@ -79,6 +82,24 @@ html[lang="ar"] {
     p,span,table,tr,td,th,div{
         font-family: 'Rubik', sans-serif;
     }
+}
+
+.p-autocomplete-panel .p-autocomplete-items .p-autocomplete-item {
+    text-align: right;
+    text-wrap: wrap;
+}
+
+html[lang="ar"] .p-buttonset .p-button:first-of-type {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-top-right-radius: 6px !important;
+    border-bottom-right-radius: 6px !important;
+}
+html[lang="ar"] .p-buttonset .p-button:last-of-type {
+    border-top-left-radius: 6px !important;
+    border-bottom-left-radius: 6px !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
 }
 
 

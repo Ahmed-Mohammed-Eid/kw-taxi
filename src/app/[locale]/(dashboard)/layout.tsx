@@ -38,14 +38,25 @@ const validateToken = async (token: string | null, locale: string) => {
 
     // CHECK THAT TOKEN IS VALID
     try {
-        const response = await axios.get(`${process.env.API_URL}/all/drivers`, {
+        const response = await axios.get(`${process.env.API_URL}/get/verify/token?token=${token}`, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
         });
 
         if (response.statusText !== 'OK') {
+            redirect({
+                href: '/login',
+                locale: locale
+            });
             throw new Error('Invalid token');
+        }
+
+        if (response.data?.decodedToken?.role !== 'admin') {
+            redirect({
+                href: '/unauthorized',
+                locale: locale
+            });
         }
     } catch (error) {
         redirect({
