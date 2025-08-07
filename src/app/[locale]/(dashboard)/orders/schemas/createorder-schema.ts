@@ -13,7 +13,15 @@ const createOrderSchema = (t: any) => {
             .max(15, { message: t('validation.max', { max: 15 }) })
             .nonempty(t('validation.required')),
         orderDate: z.date({ message: t('validation.required') }).min(new Date(new Date().setHours(0, 0, 0, 0)), { message: t('validation.futureDate') }),
-        orderTime: z.date().min(new Date(new Date().getTime() + 15 * 60 * 1000), { message: t('validation.futureTime') }),
+        orderTime: z.date()
+            .refine(
+                (val) => {
+                    const now = new Date();
+                    const minTime = new Date(now.getTime() + 15 * 60 * 1000);
+                    return val.getTime() >= minTime.getTime();
+                },
+                { message: t('validation.futureTime') }
+            ),
         serviceType: z.enum(['transportation', 'shipping'], { message: t('validation.enum') }),
         paymentType: z.enum(['subscription', 'cash'], { message: t('validation.enum') }),
         paymentMethod: z.enum(['knet', 'link'], { message: t('validation.enum') })

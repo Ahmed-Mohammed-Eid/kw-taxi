@@ -21,7 +21,9 @@
         "routeDeleted": "Route number {index} deleted",
         "allPointsCleared": "All points cleared",
         "toPoints": "End Points",
-        "fromPoints": "Start Points"
+        "noToPoint": "No end points added",
+        "fromPoints": "Start Points",
+        "route": "Route {index}"
     },
     "detailscreate_dialog": {
         "routes": "Routes",
@@ -57,7 +59,7 @@
         "max": "Maximum is {max} characters.",
         "required": "This field is required.",
         "futureDate": "The date must be in the future.",
-        "futureTime": "The time must be in the future.",
+        "futureTime": "The time must be in the future, after 15 minutes at least.",
         "enum": "Invalid value."
     }
 }
