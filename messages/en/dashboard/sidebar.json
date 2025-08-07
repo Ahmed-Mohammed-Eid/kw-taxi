@@ -5,6 +5,11 @@
     "drivers": {
         "title": "Drivers"
     },
+    "orders": {
+        "title": "Orders",
+        "pending": "Pending Orders",
+        "create": "Create Order"
+    },
     "settings": {
         "title": "Settings",
         "logout": "Logout"

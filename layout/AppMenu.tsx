@@ -1,17 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 
-import React, { useContext } from 'react';
+import React from 'react';
 import AppMenuitem from './AppMenuitem';
-import { LayoutContext } from './context/layoutcontext';
 import { MenuProvider } from './context/menucontext';
-import Link from 'next/link';
 import { AppMenuItem } from '../types';
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations,  } from 'next-intl';
 
 const AppMenu = () => {
-    const { layoutConfig } = useContext(LayoutContext);
     const t = useTranslations('dashboard_sidebar');
-    // const locale = useLocale();
 
     const model: AppMenuItem[] = [
         {
@@ -23,6 +19,27 @@ const AppMenu = () => {
                     label: t('drivers.title'),
                     icon: 'pi pi-fw pi-users',
                     to: '/drivers'
+                }
+            ]
+        },
+        {
+            label: t('orders.title'),
+            icon: 'pi pi-fw pi-home',
+            items: [
+                {
+                    label: t('orders.title'),
+                    icon: 'pi pi-fw pi-shopping-cart',
+                    to: '/orders'
+                },
+                {
+                    label: t('orders.pending'),
+                    icon: 'pi pi-fw pi-clock',
+                    to: '/orders/pending'
+                },
+                {
+                    label: t('orders.create'),
+                    icon: 'pi pi-fw pi-plus',
+                    to: '/orders/create'
                 }
             ]
         },

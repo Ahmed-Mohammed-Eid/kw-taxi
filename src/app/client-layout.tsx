@@ -8,6 +8,12 @@ import '../../styles/layout/layout.scss';
 
 import { Toaster } from 'react-hot-toast';
 
+import { addLocale } from 'primereact/api';
+import arEG from './[locale]/(dashboard)/orders/primereact-locals/ar';
+
+// Register ar-EG locale
+addLocale('ar-EG', arEG);
+
 interface RootLayoutProps {
     children: React.ReactNode;
 }

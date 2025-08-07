@@ -89,13 +89,15 @@ html[lang="ar"] {
     text-wrap: wrap;
 }
 
-html[lang="ar"] .p-buttonset .p-button:first-of-type {
+html[lang="ar"] .p-buttonset .p-button:first-of-type,
+html[lang="en"] .p-buttonset .p-button:first-of-type {
     border-top-left-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
     border-top-right-radius: 6px !important;
     border-bottom-right-radius: 6px !important;
 }
-html[lang="ar"] .p-buttonset .p-button:last-of-type {
+html[lang="ar"] .p-buttonset .p-button:last-of-type,
+html[lang="en"] .p-buttonset .p-button:last-of-type {
     border-top-left-radius: 6px !important;
     border-bottom-left-radius: 6px !important;
     border-top-right-radius: 0 !important;

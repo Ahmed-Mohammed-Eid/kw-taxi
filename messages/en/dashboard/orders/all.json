@@ -1,0 +1,35 @@
+{
+    "allOrders": {
+        "title": "All Orders"
+    },
+    "filters": {
+        "dateFrom": "From date",
+        "dateTo": "To date",
+        "filterButton": "Filter"
+    },
+    "noOrders": "No orders found.",
+    "columns": {
+        "orderNumber": "Order #",
+        "clientName": "Client Name",
+        "serviceType": "Service Type",
+        "price": "Price",
+        "paymentStatus": "Payment Status",
+        "status": "Status",
+        "date": "Order Date",
+        "paymentType": "Payment Type",
+        "actions": "Actions"
+    },
+    "actions": {
+        "view": "View"
+    },
+    "status": {
+        "pending": "Pending",
+        "confirmed": "Confirmed",
+        "in_progress": "In Progress",
+        "completed": "Completed",
+        "cancelled": "Cancelled"
+    },
+    "paymentStatus": {
+        "Pending Payment": "Pending Payment"
+    }
+}

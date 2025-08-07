@@ -1,0 +1,55 @@
+{
+    "title": "الطلبات المعلقة",
+    "dataTable": {
+        "empty": "لا توجد طلبات.",
+        "Order": {
+            "orderNumber": "رقم الطلب",
+            "clientName": "اسم العميل",
+            "orderDate": "تاريخ الطلب",
+            "orderTime": "وقت الطلب",
+            "serviceType": "نوع الخدمة",
+            "orderPrice": "سعر الطلب",
+            "paymentStatus": "حالة الدفع",
+            "status": "الحالة الحالية",
+            "actions": {
+                "title": "الإجراءات",
+                "view": "عرض",
+                "send": "إرسال"
+            }
+        }
+    },
+    "viewDialog": {
+        "header": "الطلب رقم {orderNumber}",
+        "close": "إغلاق",
+        "orderDetails": "تفاصيل الطلب",
+        "clientName": "اسم العميل",
+        "orderDate": "تاريخ الطلب",
+        "orderTime": "وقت الطلب",
+        "serviceType": "نوع الخدمة",
+        "orderPrice": "سعر الطلب",
+        "paymentType": "نوع الدفع",
+        "paymentMethod": "طريقة الدفع",
+        "paymentStatus": "حالة الدفع",
+        "currentStatus": "الحالة الحالية",
+        "distance": "المسافة",
+        "destinations": "الوجهات",
+        "destination": "الوجهة {index}",
+        "fromAddress": "عنوان الانطلاق",
+        "toAddress": "عنوان الوصول",
+        "fromCoordinates": "إحداثيات الانطلاق",
+        "toCoordinates": "إحداثيات الوصول",
+        "statusHistory": "سجل الحالات"
+    },
+    "sendDialog": {
+        "header": "إرسال الطلب رقم {orderNumber}",
+        "close": "إغلاق",
+        "driver": "السائق",
+        "selectDriver": "اختر سائقًا",
+        "send": "إرسال الطلب",
+        "cancel": "إلغاء",
+        "selectDriverPlaceholder": "اختر سائقًا من القائمة",
+        "errors": {
+            "driverPhone_error": "يرجى اختيار سائق."
+        }
+    }
+}

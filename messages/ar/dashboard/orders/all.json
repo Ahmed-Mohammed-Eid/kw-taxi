@@ -1,0 +1,35 @@
+{
+    "allOrders": {
+        "title": "جميع الطلبات"
+    },
+    "filters": {
+        "dateFrom": "من تاريخ",
+        "dateTo": "إلى تاريخ",
+        "filterButton": "تصفية"
+    },
+    "noOrders": "لا توجد طلبات.",
+    "columns": {
+        "orderNumber": "رقم الطلب",
+        "clientName": "اسم العميل",
+        "serviceType": "نوع الخدمة",
+        "price": "السعر",
+        "paymentStatus": "حالة الدفع",
+        "status": "الحالة",
+        "date": "تاريخ الطلب",
+        "paymentType": "نوع الدفع",
+        "actions": "الإجراءات"
+    },
+    "actions": {
+        "view": "عرض"
+    },
+    "status": {
+        "pending": "قيد الانتظار",
+        "confirmed": "تم التأكيد",
+        "in_progress": "قيد التنفيذ",
+        "completed": "مكتمل",
+        "cancelled": "ملغي"
+    },
+    "paymentStatus": {
+        "Pending Payment": "مدفوعات معلقة"
+    }
+}

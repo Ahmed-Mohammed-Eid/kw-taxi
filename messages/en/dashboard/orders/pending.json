@@ -1,0 +1,55 @@
+{
+    "title": "Pending Orders",
+    "dataTable": {
+        "empty": "No orders found.",
+        "Order": {
+            "orderNumber": "Order #",
+            "clientName": "Client Name",
+            "orderDate": "Order Date",
+            "orderTime": "Order Time",
+            "serviceType": "Service Type",
+            "orderPrice": "Order Price",
+            "paymentStatus": "Payment Status",
+            "status": "Current Status",
+            "actions": {
+                "title": "Actions",
+                "view": "View",
+                "send": "Send"
+            }
+        }
+    },
+    "viewDialog": {
+        "header": "Order #{orderNumber}",
+        "close": "Close",
+        "orderDetails": "Order Details",
+        "clientName": "Client Name",
+        "orderDate": "Order Date",
+        "orderTime": "Order Time",
+        "serviceType": "Service Type",
+        "orderPrice": "Order Price",
+        "paymentType": "Payment Type",
+        "paymentMethod": "Payment Method",
+        "paymentStatus": "Payment Status",
+        "currentStatus": "Current Status",
+        "distance": "Distance",
+        "destinations": "Destinations",
+        "destination": "Destination {index}",
+        "fromAddress": "From Address",
+        "toAddress": "To Address",
+        "fromCoordinates": "From Coordinates",
+        "toCoordinates": "To Coordinates",
+        "statusHistory": "Status History"
+    },
+    "sendDialog": {
+        "header": "Send Order No. {orderNumber}",
+        "close": "Close",
+        "driver": "Driver",
+        "selectDriver": "Select a Driver",
+        "send": "Send Order",
+        "cancel": "Cancel",
+        "selectDriverPlaceholder": "Choose a driver from the list",
+        "errors": {
+            "driverPhone_error": "Please select a driver."
+        }
+    }
+}

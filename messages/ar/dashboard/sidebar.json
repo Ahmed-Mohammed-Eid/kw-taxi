@@ -5,6 +5,11 @@
     "drivers": {
         "title": "السائقين"
     },
+    "orders": {
+        "title": "الطلبات",
+        "pending": "الطلبات المعلقة",
+        "create": "إنشاء طلب"
+    },
     "settings": {
         "title": "الإعدادات",
         "logout": "تسجيل الخروج"
