@@ -22,17 +22,15 @@ interface MarkerData {
     type: 'from' | 'to';
 }
 
+export interface RouteDataPoint {
+    id: number;
+    coordinates: { lat: number; lng: number };
+    address: string;
+}
+
 export interface RouteData {
-    fromPoints: {
-        id: number;
-        coordinates: { lat: number; lng: number };
-        address: string;
-    }[];
-    toPoints: {
-        id: number;
-        coordinates: { lat: number; lng: number };
-        address: string;
-    }[];
+    fromPoints: RouteDataPoint[];
+    toPoints: RouteDataPoint[];
 }
 
 interface RoutePair {
@@ -49,14 +47,16 @@ declare global {
     }
 }
 
-
 import { useTranslations } from 'next-intl';
 
 const MapRouteSelector: React.FC = () => {
     const t = useTranslations('dashboard_orders_main.maproute_selector');
 
     // ZUSTAND
-    const { setRouteData, calculatedDataDialog: {onShow, setCalculatedData, openingLoading, setKey} } = mapManagementStore();
+    const {
+        setRouteData,
+        calculatedDataDialog: { onShow, setCalculatedData, openingLoading, setKey }
+    } = mapManagementStore();
 
     // MAP REFS AND STATES
     const mapRef = useRef<HTMLDivElement>(null);
@@ -492,7 +492,7 @@ const MapRouteSelector: React.FC = () => {
                 {/* Route Pairs - Compact Version */}
                 <div className="flex-1 overflow-y-auto p-4">
                     {createRoutePairs().map((pair, index) => (
-                        <div 
+                        <div
                             key={pair.id}
                             className="card mb-3 shadow-2 border-1 p-3"
                             style={{

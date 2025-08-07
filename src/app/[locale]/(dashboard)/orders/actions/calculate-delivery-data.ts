@@ -6,7 +6,7 @@ interface Coordinates {
     coordinates: [number, number][]; // [longitude, latitude][]
 }
 
-interface DeliveryRoute {
+export interface DeliveryRoute {
     deliveryRoute: Coordinates;
     distance: number;
     estimatedTime: number;

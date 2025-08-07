@@ -17,7 +17,7 @@ type MapManagementStore = {
     };
 };
 
-const mapManagementStore = create<MapManagementStore>((set) => ({
+const mapManagementStore:any = create<MapManagementStore>((set) => ({
     routeData: {
         fromPoints: [],
         toPoints: []

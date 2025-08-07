@@ -17,6 +17,8 @@ import mapManagementStore from '../../stores/map-management';
 
 import { createOrder } from '../../actions/create-order';
 import type { CreateOrderRequestData, DestinationPoint } from '../../actions/create-order';
+import type { DeliveryRoute } from '../../actions/calculate-delivery-data';
+import type { RouteDataPoint } from '../map-points/map-route-selector';
 
 type DetailsCreateDialogProps = {
     isRTL: boolean;
@@ -55,11 +57,11 @@ function DetailsCreateDialog({ isRTL }: DetailsCreateDialogProps) {
         const minutes = orderTime.getMinutes();
 
         // CALCULATE THE DISTANCES OF ALL ROUTES
-        const totalDistance = data?.locationsData.reduce((acc, loc) => acc + loc.distance, 0) || 0;
+        const totalDistance = data?.locationsData.reduce((acc: number, loc: DeliveryRoute) => acc + loc.distance, 0) || 0;
 
         // FORMAT THE DESTINATIONS
         const formattedDestinations: DestinationPoint[] = [];
-        routeData.fromPoints.forEach((fromPoint, index) => {
+        routeData.fromPoints.forEach((fromPoint: RouteDataPoint, index: number) => {
             const obj: DestinationPoint = {
                 fromPoint: {
                     lat: fromPoint.coordinates.lat,
@@ -113,7 +115,7 @@ function DetailsCreateDialog({ isRTL }: DetailsCreateDialogProps) {
                 <>
                     <h3>{t('detailscreate_dialog.routes')}</h3>
                     <div className="flex gap-2 flex-wrap">
-                        {routeData.fromPoints.map((fromPoint, index) => (
+                        {routeData.fromPoints.map((fromPoint: RouteDataPoint, index: number) => (
                             <div key={index} className="card text-sm p-4 m-0 flex-1">
                                 <h5>{t('detailscreate_dialog.route', { index: index + 1 })}</h5>
                                 <p style={{ color: 'green' }}>{t('detailscreate_dialog.from', { address: fromPoint.address })}</p>
