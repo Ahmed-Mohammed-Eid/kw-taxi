@@ -25,6 +25,7 @@
     "status": {
         "pending": "Pending",
         "confirmed": "Confirmed",
+        "delivered": "Delivered",
         "in_progress": "In Progress",
         "completed": "Completed",
         "cancelled": "Cancelled"

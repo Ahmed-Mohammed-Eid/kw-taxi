@@ -25,6 +25,7 @@
     "status": {
         "pending": "قيد الانتظار",
         "confirmed": "تم التأكيد",
+        "delivered": "تم التسليم",
         "in_progress": "قيد التنفيذ",
         "completed": "مكتمل",
         "cancelled": "ملغي"

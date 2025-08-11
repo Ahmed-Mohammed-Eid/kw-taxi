@@ -117,29 +117,28 @@ function PendingOrdersPage() {
                 <Column
                     field="actions"
                     header={t('dataTable.Order.actions.title')}
-                    body={(rowData) => (
-                        <div className="flex gap-2">
-                            <Button icon={<Eye size={20} />} className="p-button-rounded p-button-info" tooltip={t('dataTable.Order.actions.view')} tooltipOptions={{ position: 'top' }} onClick={() => showOrderDialog(rowData)} />
-                            <Button
-                                icon={<Send size={20} />}
-                                className="p-button-rounded p-button-success"
-                                tooltip={t('dataTable.Order.actions.send')}
-                                tooltipOptions={{ position: 'top' }}
-                                onClick={() => {
-                                    setSendingOrderDialogState({ visible: true, order: rowData });
-                                }}
-                            />
-                        </div>
-                    )}
+                    body={(rowData) => {
+                        const isLastStatusPending = getCurrentStatus(rowData) === 'pending';
+
+                        return (
+                            <div className="flex gap-2">
+                                <Button icon={<Eye size={20} />} className="p-button-rounded p-button-info" tooltip={t('dataTable.Order.actions.view')} tooltipOptions={{ position: 'top' }} onClick={() => showOrderDialog(rowData)} />
+                                {isLastStatusPending && (<Button
+                                    icon={<Send size={20} />}
+                                    className="p-button-rounded p-button-success"
+                                    tooltip={t('dataTable.Order.actions.send')}
+                                    tooltipOptions={{ position: 'top' }}
+                                    onClick={() => {
+                                        setSendingOrderDialogState({ visible: true, order: rowData });
+                                    }}
+                                />)}
+                            </div>
+                        );
+                    }}
                 />
             </DataTable>
             <ViewDialog visible={viewingOrderDialog.visible} onHide={() => setViewingOrderDialog({ visible: false, order: null })} order={viewingOrderDialog.order} />
-            <SendOrderDialog 
-                onHide={() => setSendingOrderDialogState({order: null, visible: false})}
-                visible={sendingOrderDialogState.visible}
-                orderId={sendingOrderDialogState.order?._id}
-                orderNumber={sendingOrderDialogState.order?.orderNumber}
-            />
+            <SendOrderDialog onHide={() => setSendingOrderDialogState({ order: null, visible: false })} visible={sendingOrderDialogState.visible} orderId={sendingOrderDialogState.order?._id} orderNumber={sendingOrderDialogState.order?.orderNumber} />
         </div>
     );
 }
